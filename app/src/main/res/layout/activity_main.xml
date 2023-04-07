@@ -1,48 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    tools:context=".MainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="161dp"
-        android:weightSum="4"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:orientation="vertical"
-        android:layout_gravity="center">
+        android:weightSum="6">
 
         <EditText
             android:id="@+id/edtLink"
-            android:layout_margin="10dp"
-            android:cursorVisible="true"
-            android:textIsSelectable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_weight="1.5"
+            android:cursorVisible="true"
             android:ems="10"
+            android:hint="لینک دانلود خود را وارد نمایید."
             android:inputType="textPersonName"
-            android:paddingRight="7dp"
             android:keyboardNavigationCluster="true"
             android:linksClickable="true"
+            android:paddingRight="7dp"
 
-            android:hint="لینک دانلود خود را وارد نمایید." />
+            android:textIsSelectable="true" />
+
         <EditText
             android:id="@+id/edtName"
-            android:layout_margin="10dp"
-            android:cursorVisible="true"
-            android:textIsSelectable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_margin="10dp"
             android:layout_weight="1"
+            android:cursorVisible="true"
             android:ems="10"
+            android:hint="نام فایل"
             android:inputType="textPersonName"
-            android:paddingRight="7dp"
             android:linksClickable="true"
+            android:paddingRight="7dp"
 
-            android:hint="نام فایل" />
+            android:textIsSelectable="true" />
 
         <Button
             android:id="@+id/btnDl"
@@ -55,7 +59,25 @@
             android:textSize="17dp"
             android:textStyle="bold" />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:text="دانلود های اخیر"
+            android:textSize="25dp"
+            android:textStyle="bold">
+
+        </TextView>
+
+        <ListView
+            android:id="@+id/dlList"
+            android:layout_width="wrap_content"
+            android:layout_height="450dp"
+            android:layout_weight="1" />
     </LinearLayout>
 
 
 </LinearLayout>
+
+</ScrollView>
